@@ -50,7 +50,20 @@
 
 /*! General Setup  */
 * {
-  
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  font-size: 1.5rem;
+  background-color: var(--prim-main-background-color);
+  color: #fff; /*! TODO change later */
 }
 
 /*! Style Notes  */
