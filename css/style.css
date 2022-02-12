@@ -92,7 +92,6 @@ body {
 .preview-text-box {
   display: flex;
   flex-direction: column;
-  /* gap: 4.8rem; */
   padding: 3.8rem;
 }
 
