@@ -192,6 +192,7 @@ body {
 
   .preview-stats-flex {
     flex-direction: row;
+    gap: 6rem;
   }
 
   .stats-data {
