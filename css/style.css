@@ -76,6 +76,10 @@ body {
   min-height: 100vh;
 }
 
+h1 {
+  display: none;
+}
+
 /*! Style Notes  */
 .preview-container {
   display: grid;
