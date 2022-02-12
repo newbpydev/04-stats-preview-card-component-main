@@ -78,14 +78,16 @@ body {
 
 /*! Style Notes  */
 .preview-container {
-  display: grid;
-  grid-template-columns: 1fr;
-
+  display: flex;
+  flex-direction: column;
   width: 90vw;
   height: auto;
   background-color: var(--prim-card-background-color);
   border-radius: var(--border-radius);
+  /* overflow: hidden; */
   margin: 6.4rem 0 4.8rem 0;
+  /* margin-top: 4.8rem;
+  margin-bottom: 6.4rem; */
   
 }
 
@@ -101,7 +103,6 @@ body {
   height: auto;
   border-top-left-radius: var(--border-radius);
   border-top-right-radius: var(--border-radius);
-  filter: sepia(100%) saturate(250%) brightness(50%) hue-rotate(235deg);
 }
 
 .preview-header {
@@ -159,83 +160,31 @@ body {
   text-decoration: none;
 }
 
-/*! /////////////////////////////////////////////////////////  */
-/*! Media  1104px */
-@media (min-width:69em) {
+@media (min-width:32em) {
   body {
     text-align: left;
   }
   
   .preview-container {
-    grid-template-columns: 1fr 1fr;
-    align-items:center;
-    max-width: 100rem;
+    flex-direction: row-reverse;
+    justify-content: space-evenly;
+    width: 95vw;
 
   }
 
   .preview-img {
-    grid-column: 2;
-    grid-row: 1;
-    width: 100%;
+    
+    width: 50%;
     height: auto;
-
-    border-top-left-radius: 0;
-    border-bottom-right-radius: var(--border-radius);
-  }
-
-  .preview-header-title {
-    font-size: 3.5rem;
+    /* background-size: cover; */
   }
 
   .preview-text-box {
     padding: 6.4rem;
+    width: 50%;
   }
 
   .preview-stats-flex {
     flex-direction: row;
-  }
-
-  .stats-data {
-    font-size: 1.2rem;
-  }
-}
-
-/*! /////////////////////////////////////////////////////////  */
-/*! Media  1280px */
-@media (min-width:80em) {
-  body {
-    background-color: #AA5CDB;
-  }
-  .wrapper {
-    padding: 3.2rem 9.6rem;
-    background-color: var(--prim-main-background-color);
-    box-shadow: 0rem 0rem 3rem rgba(0, 0, 0, 0.2);
-    position: relative;
-  }
-
-  .wrapper::before {
-    position: absolute;
-    content: "";
-    height: 10%;
-    width: 60%;
-    background: linear-gradient(to left, rgba(170, 92, 219, 0), rgba(170, 92, 219, 0));
-    transform: rotate(-3deg);
-    left: 0rem;
-    bottom: 2rem;
-    z-index: -1;
-    box-shadow: 3rem 3rem 3rem rgba(0, 0, 0, 0.5);
-  }
-
-  .wrapper::after {
-    position: absolute;
-    content: "";
-    height: 10%;
-    width: 60%;
-    background: linear-gradient(to left, rgba(170, 92, 219, 0), rgba(170, 92, 219, 0));
-    transform: rotate(3deg);
-    right: 0rem;
-    bottom: 2rem;
-    z-index: -1;
-    box-shadow: -3rem 3rem 3rem rgba(0, 0, 0, 0.5);
   }
 }
